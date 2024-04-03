@@ -9,12 +9,13 @@ if __name__ == '__main__':
     # parser.add_argument('--method', default=0.5, type=float, help='method')
     args = parser.parse_args()
     if args.actual is None: 
-        print("Số lượng màn hình thực tế chưa được cung cấp.")
-        print("Vui lòng thử lại")
+        print("The actual number of screens has not been provided.")
+        print("Please try again.")
         sys.exit()
+
     if args.actual < 0: 
-        print("Số lượng màn hình thực tế không thể là số âm.")
-        print("Vui lòng thử lại")
+        print("The number of screens cannot be negative.")
+        print("Please try again.")
         sys.exit()
     
     YOLOv8_gas_screen_predict(input = args.imgpath, act = args.actual)    
